@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* НАВІГАЦІЯ */
+nav {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #8b0000;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* ГОЛОВНИЙ ЕКРАН */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSN8Nc9JX6xgFMcKpMdeOarPNMGvX7KTmzB6jQiuwtMg&s=10') no-repeat center center/cover;
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom: 5px solid #8b0000;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #ffd700;
+    text-shadow: 3px 3px #000;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* КНОПКИ */
+.button {
+    display: inline-block;
+    background-color: #8b0000;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #a00000;
+    transform: scale(1.05);
+}
+
+/* СЕКЦІЇ ТА МЕНЮ */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    color: #ffd700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* СТИЛЬ ДЛЯ ВСІХ КАРТОК МЕНЮ (включно з Фоксі) */
+.menu-item {
+    background: linear-gradient(rgba(22, 22, 22, 0.9), rgba(22, 22, 22, 0.9)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo_mwQZmbliVAblEVNoVKfZ1uLy_cX7ssAACUeYqmjZw&s=10') no-repeat center center/cover;
+    border: 2px solid #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-item h3 {
+    color: #ffd700;
+    text-shadow: 1px 1px #000;
+}
+
+/* ФУТЕР */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(#ffd700(26, 26, 26, 0.85), #b2c472(26, 26, 26, 0.85)), 
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpFnD1g1aGs4ut52CCZwge37TgPEwEAS_1KRdA4My9A&s=10') no-repeat center center/cover;
+    color: #ccc;
+    font-size: 0.9rem;
+    border-top: 3px solid #8b0000;
+}
+/* Анімація кнопок при наведенні */
+.button {
+    transition: 0.3s; /* Плавність анімації */
+}
+
+.button:hover {
+    background-color: #e74c3c; /* Змінюємо колір кнопки */
+    color: white; /* Робимо текст білим */
+    transform: scale(1.1); /* Трохи збільшуємо кнопку */
+}
+.about img {
+    animation: fadeIn 2s;
+}
+
+/* Анімація карток при наведенні */
+.menu-item {
+    transition: 0.3s; /* Плавна зміна */
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Картка трохи піднімається */
+}
+
+/* Анімація появи заголовка */
+header h1 {
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0; /* Спочатку заголовок невидимий */
+        transform: translateY(-30px); /* Знаходиться трохи вище */
+    }
+
+    to {
+        opacity: 1; /* Стає видимим */
+        transform: translateY(0); /* Повертається на місце */
+    }
+}
